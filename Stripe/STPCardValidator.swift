@@ -407,7 +407,7 @@ extension STPCardValidator {
     }
   }
 
-  class func cardNumberFormat(forCardNumber cardNumber: String) -> [NSNumber] {
+  public class func cardNumberFormat(forCardNumber cardNumber: String) -> [NSNumber] {
     let binRange = STPBINRange.mostSpecificBINRange(forNumber: cardNumber)
     if binRange.brand == .dinersClub && binRange.length == 14 {
       return [NSNumber(value: 4), NSNumber(value: 6), NSNumber(value: 4)]
